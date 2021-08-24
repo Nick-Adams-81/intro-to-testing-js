@@ -27,11 +27,20 @@ describe('sayHello', function() {
     it('should return a string "Hello, Alex!" when called', function() {
         expect(sayHello('Alex')).toBe('Hello, Alex!');
     });
-    it('should never return "undefined" when called', function() {
-        expect(sayHello()).not.toBe(undefined);
-    });
     it('should return a string "Hello, Pat!" when called', function() {
         expect(sayHello('Pat')).toBe('Hello, Pat!');
+    });
+    it('should return a string "Hello, World!" when called', function() {
+        expect(sayHello('World')).toBe('Hello, World!');
+    });
+    it('should return  "Hello, World!" if input is true when called', function() {
+        expect(sayHello(true)).toBe('Hello, World!');
+    });
+    it('should return "Hello, World" if input is false when called', function() {
+        expect(sayHello(false)).toBe('Hello, World!');
+    })
+    it('should never return "undefined" when called', function() {
+        expect(sayHello()).not.toBe(undefined);
     });
 
 })
