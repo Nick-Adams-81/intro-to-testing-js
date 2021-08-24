@@ -107,18 +107,23 @@ describe('add', function() {
         expect(typeof add).toBe('function');
     });
     it('should return the sum of 2 and 3 to be 5', function() {
-        expect(add(2, 3)).toBe(5);
+        expect(add(1, 4)).toBe(5);
     });
     it('should expect to return false if input is not a number', function() {
-        expect(add('banana', 'split')).toBe(false);
-        expect(add(2, 'apples')).toBe(false);
+        expect(add('banana', 'split')).toBeNaN();
+        expect(add(2, 'apples')).toBeNaN();
     });
-
+    it('should expect to return NaN if no args are present', function() {
+        expect(add()).toBeNaN();
+    });
     it('should expect the sum of -3 + -9 to be -12', function() {
         expect(add(-3, -9)).toBe(-12)
     });
     it('should expect the sum of -4 + 10 to be 6', function() {
-        expect(add(-4, 10)).toBe(6)
+        expect(add('-4', '10')).toBe(6);
+    });
+    it('should expect the sum of "5" and 6 to be 11', function() {
+        expect(add('5', 6)).toBe(11);
     });
 
 });

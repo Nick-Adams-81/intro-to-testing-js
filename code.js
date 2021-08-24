@@ -23,15 +23,22 @@ function isVowel(letter) {
             return true;
         }
     }
-    return false;
+
+     return false;
 }
 
 function add(a, b) {
-    return isNaN(b) ? false : a + b;
+    //return isNaN(b) ? NaN : Number(a) + Number(b);
+    if(isNaN(b)) {
+        return NaN;
+    }
+    return Number(a) + Number(b);
 }
 
-console.log(add(-4, 10));
-console.log(add(- 3, -9));
+console.log(add('banana', 'split'));
+console.log(add(2, 'apples'));
+console.log(add());
+
 
 
 
