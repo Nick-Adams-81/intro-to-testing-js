@@ -102,4 +102,25 @@ describe('isVowel', function() {
    });
 });
 
+describe('add', function() {
+    it('should be a defined function', function() {
+        expect(typeof add).toBe('function');
+    });
+    it('should return the sum of 2 and 3 to be 5', function() {
+        expect(add(2, 3)).toBe(5);
+    });
+    it('should expect to return false if input is not a number', function() {
+        expect(add('banana', 'split')).toBe(false);
+        expect(add(2, 'apples')).toBe(false);
+    });
+
+    it('should expect the sum of -3 + -9 to be -12', function() {
+        expect(add(-3, -9)).toBe(-12)
+    });
+    it('should expect the sum of -4 + 10 to be 6', function() {
+        expect(add(-4, 10)).toBe(6)
+    });
+
+})
+
 

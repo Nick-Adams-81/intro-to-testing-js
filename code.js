@@ -24,9 +24,18 @@ function isVowel(letter) {
         }
     }
     return false;
-
-
 }
+
+function add(a, b) {
+    if(isNaN(b)){
+        return false
+    } else {
+        return a + b;
+    }
+}
+
+console.log(add(-4, 10));
+console.log(add(- 3, -9));
 
 
 
