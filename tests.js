@@ -42,6 +42,21 @@ describe('sayHello', function() {
     it('should never return "undefined" when called', function() {
         expect(sayHello()).not.toBe(undefined);
     });
+});
 
-})
+describe('isFive', function() {
+    it('should be a defined function', function() {
+        expect(typeof isFive).toBe('function');
+    });
+    it('should return true if inputted value is five', function() {
+        expect(isFive(5)).toBe(true);
+    })
+    it('should return true if inputted value is the string "5"', function() {
+        expect(isFive('5')).toBe(true);
+    })
+    it('should return false if input is not five', function() {
+        expect(isFive()).toBe(false);
+    })
+});
+
 
