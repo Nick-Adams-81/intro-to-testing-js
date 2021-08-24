@@ -121,6 +121,6 @@ describe('add', function() {
         expect(add(-4, 10)).toBe(6)
     });
 
-})
+});
 
 

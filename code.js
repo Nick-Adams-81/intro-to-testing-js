@@ -27,11 +27,7 @@ function isVowel(letter) {
 }
 
 function add(a, b) {
-    if(isNaN(b)){
-        return false
-    } else {
-        return a + b;
-    }
+    return isNaN(b) ? false : a + b;
 }
 
 console.log(add(-4, 10));
