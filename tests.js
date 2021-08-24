@@ -77,7 +77,13 @@ describe('isEven', function() {
     });
     it('should return false if the input is infinity', function() {
         expect(isEven(Infinity)).toBe(false);
-    })
+    });
+    it('should return false when input is boolean value', function() {
+        expect(isEven(Boolean)).toBe(false);
+    });
+    it('should return false if no argument is passed in', function() {
+        expect(isEven()).toBe(false);
+    });
 });
 
 
