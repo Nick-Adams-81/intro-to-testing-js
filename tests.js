@@ -86,4 +86,20 @@ describe('isEven', function() {
     });
 });
 
+describe('isVowel', function() {
+    it('should be a defined function', function() {
+        expect(typeof isVowel).toBe('function');
+    });
+    it('should return true if the input is a vowel', function() {
+        expect(isVowel('a')).toBe(true);
+        expect(isVowel('A')).toBe(true);
+        expect(isVowel('e')).toBe(true);
+        expect(isVowel('O')).toBe(true);
+    });
+   it('should return false if input is not a vowel', function() {
+       expect(isVowel('y')).toBe(false);
+       expect(isVowel('banana')).toBe(false)
+   });
+});
+
 

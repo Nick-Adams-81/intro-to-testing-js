@@ -15,5 +15,18 @@ function isEven(number) {
   return number % 2 === 0
 }
 
+function isVowel(letter) {
+    var vowels = ['a', 'e', 'i', 'o', 'u'];
+
+    for(var i = 0; i < vowels.length; i++) {
+        if(letter.toLowerCase() === vowels[i]) {
+            return true;
+        }
+    }
+    return false;
+
+
+}
+
 
 
